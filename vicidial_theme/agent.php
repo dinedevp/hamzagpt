@@ -1,0 +1,67 @@
+<?php
+require_once __DIR__.'/session.php';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Agent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link id="theme-dark" href="css/theme-dark.css" rel="stylesheet" disabled>
+    <link href="css/theme.css" rel="stylesheet">
+    <style>
+        .lead-info { max-height: 150px; overflow-y: auto; }
+        .script-zone { max-height: 200px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+<nav class="topbar d-flex justify-content-between align-items-center p-2">
+    <h4 class="mb-0">Agent</h4>
+    <div>
+        <a href="logout.php" class="btn btn-sm btn-outline-light me-2">Déconnexion</a>
+        <button id="themeToggle" class="btn btn-sm btn-secondary">Mode sombre</button>
+    </div>
+</nav>
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Lead</h5>
+                    <div class="lead-info">
+                        <p>Nom: <strong>Durand</strong></p>
+                        <p>Prénom: <strong>Paul</strong></p>
+                        <p>Téléphone: <strong>0102030405</strong></p>
+                        <p>Adresse: <strong>1 rue Exemple, Paris</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Script d'appel</h5>
+                    <div class="script-zone">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="call-panel mb-3">
+        <button class="btn btn-success">Appeler</button>
+        <button class="btn btn-danger">Raccrocher</button>
+        <button class="btn btn-warning">Pause</button>
+    </div>
+    <div class="mb-3">
+        <h5>Dispositions</h5>
+        <button class="btn btn-outline-primary me-2">Vendu</button>
+        <button class="btn btn-outline-secondary me-2">Rappel</button>
+        <button class="btn btn-outline-danger">Refus</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
